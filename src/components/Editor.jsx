@@ -5,7 +5,7 @@ function Editor(props) {
         props.setInput(e.target.value)
     }
     return (
-        <textarea id='editor' value={props.input} onChange={handleInputChange}></textarea>
+        <textarea id='editor' value={props.input} onChange={handleInputChange} ></textarea>
     )
 }
 
