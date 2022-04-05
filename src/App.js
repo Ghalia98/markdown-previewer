@@ -1,6 +1,7 @@
-import './App.css';
-import Editor from './components/Editor';
-import Previewer from './components/Previewer';
+import './App.scss';
+import Editor from './components/editor/Editor';
+import Previewer from './components/previewer/Previewer';
+import Header from './components/header/Header';
 import { useState } from 'react';
 const initialMarkdown = `
 # Welcome to my React Markdown Previewer!
@@ -20,10 +21,10 @@ function anotherExample(firstLine, lastLine) {
 }
 \`\`\`
 You can also make text **bold** ...whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-  And feel free to go crazy ~~crossing stuff out~~.
-There is also [links](https://www.freecodecamp.org), and
+\r\n Or _italic_.
+\r\n Or... wait for it... **_both!_**
+\r\n And feel free to go crazy ~~crossing stuff out~~.
+\r\n There's also [links](https://www.freecodecamp.org), and
 > Block Quotes!
 
 And if you want to get really crazy, even tables:
@@ -49,8 +50,11 @@ function App() {
   const [input, setInput] = useState(initialMarkdown)
   return (
     <div className="App">
-      <Editor input={input} setInput={setInput} />
-      <Previewer input={input} />
+      <Header />
+      <div className='container'>
+        <Editor input={input} setInput={setInput} className="container" />
+        <Previewer input={input} className="container" />
+      </div>
     </div>
   );
 }

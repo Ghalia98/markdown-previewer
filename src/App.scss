@@ -1,0 +1,32 @@
+.App {
+  width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 600px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+.container {
+  display: flex;
+  width: 90%;
+  border: 1px solid black;
+  height: 95%;
+  box-sizing: border-box;
+}
+
+.dark {
+  background-color: #333533;
+  color: #e8eddf;
+
+  a {
+    color: #f5cb5c
+  }
+}
+
+}
+
+

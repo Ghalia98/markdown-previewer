@@ -1,0 +1,12 @@
+#header {
+    background-color: #cfdbd5;
+    width: 90%;
+    height:5%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    #editor-header,#preview-header {
+        width: 50%;
+        padding-left: 0.5em;
+    }
+}
