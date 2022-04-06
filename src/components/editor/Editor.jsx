@@ -7,7 +7,7 @@ function Editor(props) {
     }
     return (
         <>
-            <textarea id='editor' className="dark" value={props.input} onChange={handleInputChange}></textarea>
+            <textarea id='editor' className={props.darkmode ? "dark" : "light"} value={props.input} onChange={handleInputChange}></textarea>
         </>
     )
 }

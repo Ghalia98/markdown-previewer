@@ -2,6 +2,7 @@ import './App.scss';
 import Editor from './components/editor/Editor';
 import Previewer from './components/previewer/Previewer';
 import Header from './components/header/Header';
+import DarkModeBtn from './components/darkModeBtn/DarkModeBtn';
 import { useState } from 'react';
 const initialMarkdown = `
 # Welcome to my React Markdown Previewer!
@@ -48,12 +49,16 @@ And here. | Okay. | I think we get it.
 `
 function App() {
   const [input, setInput] = useState(initialMarkdown)
+  const [darkmode, setDarkMode] = useState(false)
   return (
-    <div className="App">
-      <Header />
-      <div className='container'>
-        <Editor input={input} setInput={setInput} className="container" />
-        <Previewer input={input} className="container" />
+    <div className="App" style={darkmode ? { backgroundColor: '#242423' } : { backgroundColor: '#e8eddf' }}>
+      <DarkModeBtn darkmode={darkmode} setDarkMode={setDarkMode} />
+      <div className='app-container' >
+        <Header />
+        <div className="row">
+          <Editor input={input} setInput={setInput} darkmode={darkmode} className="container" />
+          <Previewer input={input} darkmode={darkmode} className="container" />
+        </div>
       </div>
     </div>
   );

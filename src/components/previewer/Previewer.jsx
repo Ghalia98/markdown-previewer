@@ -4,7 +4,7 @@ import './Previewer.scss'
 
 function Previewer(props) {
   return (
-    <div id='preview' className='dark' dangerouslySetInnerHTML={{ __html: marked(props.input) }}></div>
+    <div id='preview' className={props.darkmode ? "dark" : "light"} dangerouslySetInnerHTML={{ __html: marked(props.input) }}></div>
   )
 }
 

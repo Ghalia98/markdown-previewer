@@ -1,0 +1,20 @@
+.switch-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 95%;
+    padding:1% 0;
+
+    #theme-switch {
+        // position: fixed;
+        // right: 50px;
+        // top: 20px;
+        cursor: pointer;
+        color: #f5cb5c;
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+    }
+    
+}
+
