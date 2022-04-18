@@ -1,18 +1,12 @@
+@import "../../App.scss";
 .switch-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 95%;
+    @include common (row, flex-end, center, 95%, null, null); 
     padding:1% 0;
 
     #theme-switch {
-        // position: fixed;
-        // right: 50px;
-        // top: 20px;
         cursor: pointer;
         color: #f5cb5c;
-        display: flex;
-        align-items: center;
+    @include common (row, stretch, center, null, null, null); 
         padding-left: 5px;
     }
     

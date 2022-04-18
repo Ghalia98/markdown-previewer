@@ -1,10 +1,7 @@
+@import "../../App.scss";
 #header {
-    background-color: #cfdbd5;
-    width: 90%;
-    height:5%;
+  @include common (row, stretch, center, 90%, 5%, #cfdbd5);
     margin: auto;
-    display: flex;
-    align-items: center;
     color: #242423;
     font-weight: 700;
     
